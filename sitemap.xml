@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tiny-mouse.net/</loc></url>
-  <url><loc>https://tiny-mouse.net/films.html</loc></url>
-  <url><loc>https://tiny-mouse.net/films/yuragi.html</loc></url>
-  <url><loc>https://tiny-mouse.net/works.html</loc></url>
-  <url><loc>https://tiny-mouse.net/about.html</loc></url>
-  <url><loc>https://tiny-mouse.net/contact.html</loc></url>
+  <url><loc>https://tiny-mouse.net/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://tiny-mouse.net/films.html</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://tiny-mouse.net/films/yuragi.html</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://tiny-mouse.net/works.html</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://tiny-mouse.net/about.html</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://tiny-mouse.net/contact.html</loc><lastmod>2026-10-03</lastmod></url>
 </urlset>
