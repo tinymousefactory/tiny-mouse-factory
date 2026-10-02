@@ -1,4 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.nav');
+  const menu = nav ? nav.querySelector('.menu') : null;
+
+  if (nav && menu) {
+    const oldNote = nav.querySelector('.mobile-note');
+    if (oldNote) oldNote.remove();
+
+    const toggle = document.createElement('button');
+    toggle.className = 'mobile-menu-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'メニューを開く');
+    toggle.textContent = 'MENU';
+    nav.appendChild(toggle);
+
+    const setMenuOpen = (open) => {
+      menu.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      toggle.textContent = open ? 'CLOSE' : 'MENU';
+    };
+
+    toggle.addEventListener('click', () => {
+      setMenuOpen(!menu.classList.contains('is-open'));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (menu.classList.contains('is-open') && !nav.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 620) setMenuOpen(false);
+    });
+  }
+
   const form = document.querySelector('form[data-formspark]');
   if (!form) return;
 
@@ -28,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status.textContent = 'お問い合わせを送信しました。ありがとうございます。';
       status.classList.add('success');
     } catch (error) {
-      status.textContent = '送信できませんでした。時間をおいて再度お試しいただくか、下記メールアドレスからご連絡ください。';
+      status.textContent = '送信できませんでした。時間をおいて再度お試しください。';
       status.classList.add('error');
     } finally {
       button.disabled = false;
