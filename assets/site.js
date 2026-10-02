@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const mobileNavStyle = document.createElement('style');
+  mobileNavStyle.textContent = `
+    .mobile-menu-toggle{display:none;border:0;background:transparent;color:var(--ink);padding:10px 0;font:inherit;font-size:10px;letter-spacing:.16em;cursor:pointer}
+    .mobile-note{display:none!important}
+    @media(max-width:620px){
+      .nav{position:relative}
+      .mobile-menu-toggle{display:block}
+      .menu{display:none;position:absolute;top:100%;left:0;right:0;z-index:40;flex-direction:column;gap:0;background:rgba(11,11,11,.98);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.1);padding:8px 0 12px;box-shadow:0 18px 35px rgba(0,0,0,.38)}
+      .menu.is-open{display:flex}
+      .menu a{display:block;padding:12px 4px;font-size:12px;letter-spacing:.16em;border-bottom:1px solid rgba(255,255,255,.06)}
+      .menu a:last-child{border-bottom:0}
+    }
+  `;
+  document.head.appendChild(mobileNavStyle);
+
   const nav = document.querySelector('.nav');
   const menu = nav ? nav.querySelector('.menu') : null;
 
