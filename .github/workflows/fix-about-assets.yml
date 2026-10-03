@@ -1,0 +1,32 @@
+name: Fix About Assets
+
+on:
+  push:
+    branches:
+      - asset-fix-final-20261003
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild corrected WebP files
+        shell: bash
+        run: |
+          base64 -d .tmp-assets/camera.0.txt > assets/images/about-cinematography.webp
+          cat .tmp-assets/award.0.txt .tmp-assets/award.1.txt .tmp-assets/award.2.txt | base64 -d > assets/images/award-giffi.webp
+          test "$(wc -c < assets/images/about-cinematography.webp)" -eq 13232
+          test "$(wc -c < assets/images/award-giffi.webp)" -eq 12956
+          file assets/images/about-cinematography.webp
+          file assets/images/award-giffi.webp
+          rm -rf .tmp-assets
+          rm -f .github/workflows/fix-about-assets.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Rebuild About image assets"
+          git push
