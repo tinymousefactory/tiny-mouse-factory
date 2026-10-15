@@ -1,0 +1,28 @@
+name: Rebuild Open Graph images once
+on:
+  push:
+    paths:
+      - '.github/workflows/ogp-rebuild-once.yml'
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Japanese fonts and Pillow
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          python -m pip install --quiet Pillow
+      - name: Build and verify social preview JPGs
+        run: python tools/ogp_rebuild_once.py
+      - name: Commit generated JPG and metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/ogp-*-v2.jpg index.html films.html films/yuragi.html films/minna.html films/minna-screenings.html works.html about.html contact.html
+          git diff --cached --quiet || (git commit -m "Fix social sharing cards across all pages" && git push)
