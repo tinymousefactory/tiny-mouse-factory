@@ -65,3 +65,20 @@ footer{border-top:1px solid var(--line);padding:45px 0;color:#777;font-size:11px
 .trailer-block{margin-top:34px}.trailer-block:first-of-type{margin-top:0}.trailer-label{font-size:10px;letter-spacing:.18em;color:#8f887e;margin:0 0 12px}.trailer-note{margin:24px 0 0;color:#8f887e;font-size:13px}
 @media(max-width:900px){.talks-grid{grid-template-columns:1fr;gap:30px}.podcast-links{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.home-about-copy{padding:24px 0 0}.home-about-name{font-size:44px}.home-about-role{font-size:20px}.podcast-links{grid-template-columns:1fr}.podcast-links a{padding:22px}.profile-kawashima img{object-position:94% center}.director-profile-name{font-size:clamp(36px,11vw,52px)!important}}
+
+/* Lectures & Talks: ABOUT and CONTACT */
+.lecture-block{margin-top:72px;padding-top:36px;border-top:1px solid var(--line)}
+.lecture-block .eyebrow,.lecture-contact .eyebrow{color:#b9a276}
+.lecture-block h3{font-family:serif;font-size:clamp(28px,3vw,42px);font-weight:400;line-height:1.25;margin:0 0 18px}
+.lecture-block .lecture-intro{font-size:15px;line-height:1.9;margin:0 0 28px}
+.lecture-topics{border-top:1px solid var(--line)}
+.lecture-topic{padding:19px 0 20px;border-bottom:1px solid var(--line)}
+.lecture-topic h4{font-size:17px;font-weight:500;line-height:1.55;margin:0 0 7px;color:var(--ink)}
+.lecture-block .lecture-topic p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}
+.lecture-block .lecture-agency{font-size:13px;color:var(--muted);margin:27px 0 7px}
+.lecture-cta{display:inline-flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #80755e;color:#d9c79f;font-size:13px;line-height:1.6;transition:border-color .2s,color .2s}
+.lecture-cta:hover,.lecture-cta:focus-visible{color:#fff;border-color:#fff}
+.lecture-contact{max-width:780px;margin-top:42px;padding:34px 0 0;border-top:1px solid var(--line)}
+.lecture-contact h2{font-family:serif;font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.35;margin:0 0 15px}
+.lecture-contact p{color:var(--muted);font-size:14px;line-height:1.9;max-width:700px;margin:0 0 14px}
+@media(max-width:620px){.lecture-block{margin-top:56px;padding-top:30px}.lecture-topic h4{font-size:15px}.lecture-contact{margin-top:32px;padding-top:28px}}
