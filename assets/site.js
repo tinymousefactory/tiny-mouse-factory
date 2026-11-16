@@ -157,10 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Keep the same content page when switching between Japanese and English.
-  const isEnglishPage = /^\\/en(?:\\/|$)/.test(window.location.pathname);
-  const currentPath = window.location.pathname.replace(/\\/+$/, '') || '/';
+  const isEnglishPage = /^\/en(?:\/|$)/.test(window.location.pathname);
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
   const japanesePath = isEnglishPage
-    ? (currentPath.replace(/^\\/en(?=\\/|$)/, '') || '/')
+    ? (currentPath.replace(/^\/en(?=\/|$)/, '') || '/')
     : currentPath;
   const englishPath = '/en' + (japanesePath === '/' ? '/index.html' : japanesePath);
   if (nav) {
