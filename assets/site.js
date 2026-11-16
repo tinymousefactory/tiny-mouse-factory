@@ -149,10 +149,41 @@ document.addEventListener('DOMContentLoaded', () => {
       .menu a:last-child{border-bottom:0}
     }
   `;
+  mobileNavStyle.textContent += "\n    .menu{margin-left:auto}\n    .lang-switch{display:flex;align-items:center;gap:7px;white-space:nowrap;font-size:11px;letter-spacing:.12em;color:#aaa}\n    .lang-switch::before{content:'';display:block;width:1px;height:18px;background:rgba(255,255,255,.28);margin-right:7px}\n    .lang-switch a{color:#999;text-decoration:none;padding:8px 1px}\n    .lang-switch a:hover,.lang-switch a[aria-current=\"page\"]{color:#fff}\n    .lang-switch .lang-divider{color:#666}\n    @media(max-width:900px){.nav{gap:14px}.menu{gap:13px}}\n    @media(max-width:620px){\n      .nav{gap:9px}\n      .brand{margin-right:auto}\n      .lang-switch{order:2;font-size:10px;gap:4px}\n      .lang-switch::before{height:15px;margin-right:5px}\n      .mobile-menu-toggle{order:3;padding:8px 0 8px 5px}\n    }\n";
   document.head.appendChild(mobileNavStyle);
 
   const nav = document.querySelector('.nav');
   const menu = nav ? nav.querySelector('.menu') : null;
+
+
+  // Keep the same content page when switching between Japanese and English.
+  const isEnglishPage = /^\\/en(?:\\/|$)/.test(window.location.pathname);
+  const currentPath = window.location.pathname.replace(/\\/+$/, '') || '/';
+  const japanesePath = isEnglishPage
+    ? (currentPath.replace(/^\\/en(?=\\/|$)/, '') || '/')
+    : currentPath;
+  const englishPath = '/en' + (japanesePath === '/' ? '/index.html' : japanesePath);
+  if (nav) {
+    const languageNav = document.createElement('div');
+    languageNav.className = 'lang-switch';
+    languageNav.setAttribute('aria-label', isEnglishPage ? 'Language' : '言語切り替え');
+    const jp = document.createElement('a');
+    jp.href = japanesePath;
+    jp.textContent = 'JP';
+    jp.lang = 'ja';
+    if (!isEnglishPage) jp.setAttribute('aria-current', 'page');
+    const separator = document.createElement('span');
+    separator.className = 'lang-divider';
+    separator.textContent = '/';
+    separator.setAttribute('aria-hidden','true');
+    const en = document.createElement('a');
+    en.href = englishPath;
+    en.textContent = 'EN';
+    en.lang = 'en';
+    if (isEnglishPage) en.setAttribute('aria-current', 'page');
+    languageNav.append(jp,separator,en);
+    nav.appendChild(languageNav);
+  }
 
   if (nav && menu) {
     const oldNote = nav.querySelector('.mobile-note');
@@ -162,14 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.className = 'mobile-menu-toggle';
     toggle.type = 'button';
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'メニューを開く');
+    toggle.setAttribute('aria-label', isEnglishPage ? 'Open menu' : 'メニューを開く');
     toggle.textContent = 'MENU';
     nav.appendChild(toggle);
 
     const setMenuOpen = (open) => {
       menu.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      toggle.setAttribute('aria-label', open ? (isEnglishPage ? 'Close menu' : 'メニューを閉じる') : (isEnglishPage ? 'Open menu' : 'メニューを開く'));
       toggle.textContent = open ? 'CLOSE' : 'MENU';
     };
 
@@ -222,10 +253,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!response.ok) throw new Error('Submission failed');
 
       form.reset();
-      status.textContent = 'お問い合わせを送信しました。ありがとうございます。';
+      status.textContent = isEnglishPage ? 'Thank you. Your message has been sent.' : 'お問い合わせを送信しました。ありがとうございます。';
       status.classList.add('success');
     } catch (error) {
-      status.textContent = '送信できませんでした。時間をおいて再度お試しください。';
+      status.textContent = isEnglishPage ? 'Your message could not be sent. Please try again later.' : '送信できませんでした。時間をおいて再度お試しください。';
       status.classList.add('error');
     } finally {
       button.disabled = false;
