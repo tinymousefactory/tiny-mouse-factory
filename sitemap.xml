@@ -1,11 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tiny-mouse.net/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/films.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/films/yuragi.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/works.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/about.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/contact.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/films/minna.html</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://tiny-mouse.net/films/minna-screenings.html</loc><lastmod>2026-10-03</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tiny-mouse.net/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/index.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/films.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/films.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/works.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/works.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/works.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/works.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/works.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/about.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/about.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/about.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/about.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/contact.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/contact.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/contact.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/contact.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/films/minna.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/minna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/minna.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/minna.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/films/minna.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/minna.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/minna.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/minna.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/films/yuragi.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/yuragi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/yuragi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/yuragi.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/films/yuragi.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/yuragi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/yuragi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/yuragi.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/films/minna-screenings.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/minna-screenings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/minna-screenings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/minna-screenings.html"/>
+  </url>
+  <url>
+    <loc>https://tiny-mouse.net/en/films/minna-screenings.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tiny-mouse.net/films/minna-screenings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tiny-mouse.net/en/films/minna-screenings.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tiny-mouse.net/films/minna-screenings.html"/>
+  </url>
 </urlset>
