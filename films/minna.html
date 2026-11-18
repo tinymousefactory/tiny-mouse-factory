@@ -54,6 +54,23 @@ body.minna-page{background:var(--minna-paper);color:var(--minna-ink);font-family
 .minna-store-separate{padding-top:21px;border-top:1px solid var(--minna-line)}
 .minna-store-separate p{margin:0 0 12px;font-size:13px;color:#676052}
 @media(max-width:700px){.minna-watch-grid{grid-template-columns:1fr}.minna-watch-card{padding:24px}.minna-watch-btn{width:100%}}
+
+/* Japanese checkout walkthrough */
+.minna-purchase-guide{margin:0 0 27px;background:#f9f6ee;border:1px solid var(--minna-line);color:var(--minna-ink)}
+.minna-purchase-guide summary{display:flex;flex-wrap:wrap;align-items:center;gap:5px 16px;cursor:pointer;list-style:none;padding:18px 25px;font-size:15px;font-weight:600;line-height:1.6}
+.minna-purchase-guide summary::-webkit-details-marker{display:none}
+.minna-purchase-guide summary::before{content:"+";display:inline-flex;justify-content:center;align-items:center;width:25px;height:25px;border:1px solid var(--minna-green);border-radius:50%;color:var(--minna-green);font-size:18px;font-weight:400;flex-shrink:0}
+.minna-purchase-guide[open] summary::before{content:"−"}
+.minna-purchase-guide summary:focus-visible{outline:2px solid var(--minna-green);outline-offset:-3px}
+.minna-guide-hint{font-size:12px;color:#766c5b;font-weight:400}
+.minna-guide-content{border-top:1px solid var(--minna-line);padding:22px 26px 26px;font-size:14px;line-height:1.85}
+.minna-guide-lead{margin:0 0 16px}
+.minna-guide-content ol{margin:0 0 18px;padding-left:24px}
+.minna-guide-content li{padding-left:5px;margin-bottom:17px}
+.minna-guide-content li::marker{font-weight:700;color:var(--minna-green)}
+.minna-guide-content li p{margin:3px 0 0;font-size:13px;color:#625c50}
+.minna-guide-note{margin:0;font-size:12px;color:#756d61}
+@media(max-width:700px){.minna-purchase-guide summary{padding:16px}.minna-guide-content{padding:19px 17px 23px}}
 </style>
 <link href="https://tiny-mouse.net/films/minna.html" rel="canonical"/><meta content="ja_JP" property="og:locale"/><meta content="video.movie" property="og:type"/><meta content="Tiny Mouse Factory" property="og:site_name"/><meta content="映画『みんなのふね』 | Minna: A Boat for Everyone" property="og:title"/><meta content="人・自然・地球——。石おのと一本の巨木から始まった、2年以上にわたる丸木舟づくりの記録。" property="og:description"/><meta content="https://tiny-mouse.net/films/minna.html" property="og:url"/><meta property="og:image" content="https://tiny-mouse.net/assets/images/ogp-minna-v2.jpg"><meta name="twitter:card" content="summary_large_image"><meta content="映画『みんなのふね』 | Minna: A Boat for Everyone" name="twitter:title"/><meta content="石おのと一本の巨木から始まった、2年以上にわたる丸木舟づくりの記録。" name="twitter:description"/><meta name="twitter:image" content="https://tiny-mouse.net/assets/images/ogp-minna-v2.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Movie","name":"みんなのふね","alternateName":"Minna: A Boat for Everyone","dateCreated":"2025","duration":"PT91M","inLanguage":"ja","countryOfOrigin":{"@type":"Country","name":"Japan"},"image":"https://tiny-mouse.net/assets/images/minna-poster.webp","url":"https://tiny-mouse.net/films/minna.html","director":{"@type":"Person","name":"にしやまゆうき"},"musicBy":{"@type":"Person","name":"にしやまゆうき"},"productionCompany":{"@type":"Organization","name":"Tiny Mouse Factory"}}</script><meta property="og:image:secure_url" content="https://tiny-mouse.net/assets/images/ogp-minna-v2.jpg">
 <meta property="og:image:width" content="1200">
@@ -89,7 +106,22 @@ body.minna-page{background:var(--minna-paper);color:var(--minna-ink);font-family
 <div class="minna-watch-grid">
 <article class="minna-watch-card primary"><div class="watch-label">Original Film / 本編</div><h3>映画『みんなのふね』本編</h3><p>90分超のドキュメンタリー本編。日本語・英語字幕に対応。</p><div class="minna-watch-prices"><span>レンタル <strong>800円</strong></span><span>購入 <strong>1,800円</strong></span></div><a class="minna-watch-btn" href="https://tinymousefactoryfilms.vhx.tv/checkout/minna-a-boat-for-everyone" target="_blank" rel="noopener noreferrer" aria-label="映画『みんなのふね』本編のレンタル・購入ページを開く">本編をレンタル・購入する →</a></article>
 <article class="minna-watch-card"><div class="watch-label">Audio Commentary / 副音声版</div><h3>監督・Jomonさん副音声版</h3><p>監督・にしやまゆうきとJomonさんが本編映像を一緒に観ながら、撮影当時の出来事や作品への思いを語る特別版。通常版とは異なります。</p><div class="minna-watch-prices"><span>レンタル <strong>600円</strong></span><span>購入 <strong>1,400円</strong></span></div><a class="minna-watch-btn outline" href="https://tinymousefactoryfilms.vhx.tv/checkout/minna-a-boat-for-everyone-audio-commentary" target="_blank" rel="noopener noreferrer" aria-label="映画『みんなのふね』副音声版のレンタル・購入ページを開く">副音声版をレンタル・購入する →</a></article>
-</div><p class="minna-watch-footnote">※別々の商品です。副音声版は、本編を鑑賞した後にお楽しみいただくことをおすすめします。決済はVimeo OTTで行われます。実際の表示通貨・最終金額は決済画面をご確認ください。</p>
+</div>
+<details class="minna-purchase-guide" id="purchase-guide">
+<summary>ご購入・視聴方法（日本語ガイド）<span class="minna-guide-hint">英語の決済画面の操作はこちら</span></summary>
+<div class="minna-guide-content">
+<p class="minna-guide-lead">Vimeo OTTの決済画面は現在、英語で表示されます。以下の手順でお手続きいただけます。</p>
+<ol>
+<li><strong>公式サイトから商品を選ぶ</strong><p>上の「本編をレンタル・購入する」または「副音声版をレンタル・購入する」を押します。</p></li>
+<li><strong>アカウントを作成・ログインする</strong><p>初めての方は「Create your account」でメールアドレス（Email）と8文字以上のパスワード（Password）を設定し、「Continue」を押してください。すでにアカウントがある方は「Log in」からログインします。ニュースレターの受信チェックは任意です。</p></li>
+<li><strong>レンタルか購入を選ぶ</strong><p>決済画面で「Rent（レンタル）」または「Buy（購入）」を選択します。購入の場合は「Name your price（価格を指定）」欄に最低購入価格が入力されています。その金額のまま購入でき、作品を追加で応援したい方は最低価格以上の任意の金額に変更できます。</p></li>
+<li><strong>支払いを完了する</strong><p>カード情報などを入力し、金額を確認して「Complete purchase（購入を確定）」を押します。Apple Payなど、利用できる決済方法は環境によって異なります。決済サービス「Link」からSMS認証コードが送られてくる場合があります。</p></li>
+<li><strong>映画を視聴する</strong><p>決済完了後、Vimeo OTTにログインした状態で購入・レンタルした作品を再生できます。レンタルの視聴期限は購入画面でご確認ください。</p></li>
+</ol>
+<p class="minna-guide-note">※「Buy」は作品を継続視聴できる購入、「Rent」は期限付きのレンタルです。購入前に商品名・選択内容・最終金額をご確認ください。認証コードは第三者に教えないでください。</p>
+</div>
+</details>
+<p class="minna-watch-footnote">※別々の商品です。副音声版は、本編を鑑賞した後にお楽しみいただくことをおすすめします。決済はVimeo OTTで行われます。実際の表示通貨・最終金額は決済画面をご確認ください。</p>
 <div class="minna-store-separate"><p>Blu-ray・DVD・パンフレットはTiny Mouse Factoryのオンラインストアで販売しています。</p><div class="minna-actions"><a href="https://tinymouse.official.ec/" rel="noopener noreferrer" target="_blank">Blu-ray・DVD・パンフレットの購入（BASE） →</a></div></div></div></section>
 <section class="minna-section green" id="screening"><div class="wrap"><div class="eyebrow">Screenings / Talks</div><h2>上映会募集中</h2><div class="minna-copy"><p>本作の上映会を、誰でも主催者になれるサービス・cinemoで募集中！ご希望の方はcinemoサイトよりお申込みください。</p><p>cinemoは社会問題解決に向けた映画配給を行うユナイテッドピープル株式会社が運営しています。</p><h3>監督トーク付上映会プラン</h3><p>監督自ら、映画上映後のトークイベントを行うことができます。</p><p>Jomonさんが願うこと、撮影中に起きたこと、映画に込めた思い、お客様とのコミュニケーション等、様々なご要望に応えます。対談・独演など、ご希望のスタイルでお話します。</p><p>実際に作成した石おのや杉の実物をお持ちして、映画の世界をより実感頂けます（杉の実物は壊れやすいため、車で運搬・移動できる範囲に限らせていただきます）。</p></div><div class="minna-actions"><a href="https://www.cinemo.info/147j" rel="noopener" target="_blank">cinemo 上映申込 →</a><a href="https://www.cinemo.info/cinemo.html" rel="noopener" target="_blank">cinemoについて →</a><a href="../contact.html">監督トーク・講演の相談 →</a></div></div></section>
 <section class="minna-section"><div class="wrap"><div class="eyebrow">Screening Examples</div><h2>いろんな場所で上映会できます</h2><div class="minna-screening-cards"><article class="minna-screening-card"><img alt="廃校での上映会" decoding="async" loading="lazy" src="../assets/images/minna-wix-639016bfc2.webp"/><p>廃校での上映会<br/>愛知県東栄町</p></article><article class="minna-screening-card"><img alt="大ホールでの上映会" decoding="async" loading="lazy" src="../assets/images/minna-wix-09d9cec3ca.webp"/><p>大ホールでの上映会<br/>岡山県瀬戸内市</p></article><article class="minna-screening-card"><img alt="屋外上映会" decoding="async" loading="lazy" src="../assets/images/minna-wix-a8c7524961.webp"/><p>屋外上映会<br/>山梨県甲州市</p></article><article class="minna-screening-card"><img alt="小屋での上映会" decoding="async" loading="lazy" src="../assets/images/minna-wix-eab45fb6ce.webp"/><p>小屋での上映会<br/>山梨県甲州市</p></article></div><div class="minna-actions"><a href="minna-screenings.html">過去の上映会一覧 →</a></div></div></section>
